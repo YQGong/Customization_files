@@ -1,5 +1,7 @@
 #!/bin/bash
 
 git pull
-dos2unix -f vim_binding.vimrc
-dos2unix vim_plugin.vimrc
+for i in "-f vim_binding.vimrc" "vim_plugin.vimrc" "bashrc"
+do
+dos2unix $i 
+done
