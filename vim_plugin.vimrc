@@ -11,7 +11,15 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'isnowfy/python-vim-instant-markdown'
 "markdown end
+"
+"美化状态栏
+Plugin 'Lokaltog/vim-powerline'
 
+"书签
+Plugin 'kshenoy/vim-signature'
+
+"显示行末空格
+Bundle 'ShowTrailingWhitespace'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/syntastic'
