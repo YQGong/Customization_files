@@ -46,7 +46,7 @@ map    <C-z>   :!
 "inoremap b  <C-o>b
 "inoremap a <C-o>$
 "inoremap i <C-o>^
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=300 ttimeoutlen=0
 
 "
 " input double stuffs
