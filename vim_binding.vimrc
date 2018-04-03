@@ -22,6 +22,7 @@ nnoremap nw <C-W><C-W>
 " 定义快捷键在结对符之间跳转
 nmap <Leader>M %
 
+nnoremap gf f/f.gf
 "
 "
 "save quit shell
