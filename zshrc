@@ -59,9 +59,18 @@ bindkey -v
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  z
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+
+# track the dir manually by z
+_Z_NO_RESOLVE_SYMLINKS=1
+_Z_NO_PROMPT_COMMAND=1
 
 # User configuration
 
@@ -92,4 +101,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #source ~/work/Customization_files/local.bashrc
+
+#标题栏、任务栏样式{{{
+case $TERM in (*xterm*|*rxvt*|(dt|k|E)term)
+precmd () { print -Pn "\e]0;%n@%M//%/\a" }
+preexec () { print -Pn "\e]0;%n@%M//%/\ $1\a" }
+;;
+esac
+#}}}
+
+#启用 cd 命令的历史纪录，cd -[TAB]进入历史路径
+setopt AUTO_PUSHD
+#相同的历史路径只保留一个
+setopt PUSHD_IGNORE_DUPS
+
+#自动补全功能 {{{
+setopt AUTO_LIST
+setopt AUTO_MENU
+#开启此选项，补全时会直接选中菜单项
+#setopt MENU_COMPLETE
+
 stty -ixon

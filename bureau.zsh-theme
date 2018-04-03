@@ -120,7 +120,7 @@ bureau_precmd () {
 setopt prompt_subst
 ### gyqmod
 ### PROMPT='> $_LIBERTY '
-PROMPT='> '
+PROMPT='> %{$reset_color%}'
 #RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 RPROMPT=''
 

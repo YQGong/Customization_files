@@ -1,3 +1,5 @@
+alias ls='ls'
+unalias ls
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -15,11 +17,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias ls='ls'
-unalias ls
 myls() {
 #ls并打印README
-ls --color=auto
+ls $1 --color=auto
 if [ -s .DIRREADME.txt ]
 then
     echo "";
@@ -28,6 +28,7 @@ fi
 }
 
 alias ls='myls'
+
 cd() {
 builtin cd "$@"
 #进入新的目录后ls并打印README
@@ -44,10 +45,11 @@ local ohistsize=$HISTSIZE
 HISTSIZE=0                              # Discard previous dir's history
 HISTSIZE=$ohistsize                     # Prepare for new dir's history
 fc -R                                       #read from current histfile
+#track common dirs
+_z --add "${PWD:a}"
 }
 
 cdl() { cd "$@" && ls -Al; }
-
 
 alias cd..='cd ..'
 
@@ -55,6 +57,7 @@ mkdir -p $HOME/.zsh_history$PWD
 export HISTFILE="$HOME/.zsh_history$PWD/zhistory"
 
 function allhistory { cat $(find $HOME/.zsh_history -name zhistory) }
+function cleanallhistory { rm $(find $HOME/.zsh_history -name zhistory) }
 function convhistory {
 sort $1 | uniq |
 sed 's/^:\([ 0-9]*\):[0-9]*;\(.*\)/\1::::::\2/' |
