@@ -55,4 +55,7 @@ fi
 stty -ixon
 PS1='\[\e]0;\w\a\]\n  \[\e[32m\][ \u @ \h ]     \[\e[0m\][ \A | \d ] \n\[\e[33m\]----<\w>----\[\e[0m\] \n$   >'
 
-
+if [ -s ~/.DIRREADME.txt ]
+then
+    cat ~/.DIRREADME.txt;
+fi;
