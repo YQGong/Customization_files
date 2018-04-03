@@ -1,0 +1,3 @@
+git.sh可以直接add commit push，用法：
+./git.sh [messages]
+在cygwin下需要使用pull.sh下载远程仓库。
