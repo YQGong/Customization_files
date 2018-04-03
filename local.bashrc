@@ -18,6 +18,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias cd="cd"
 unalias cd
 cdls() {
 cd "$@" && ls &&
