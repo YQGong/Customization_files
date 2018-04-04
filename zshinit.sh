@@ -8,4 +8,8 @@ rm ~/.oh-my-zsh/themes/bureau.zsh-theme
 ln -s $PWD/bureau.zsh-theme ~/.oh-my-zsh/themes/bureau.zsh-theme
 rm ~/.zsh_history
 mkdir ~/.zsh_history
+chmod +x myzsh.sh
+sudo ln -s $PWD/myzsh.sh /usr/bin/zsh
+sudo echo "/usr/bin/myzsh" >> /etc/shell
+chsh -s $(which myzsh)
 echo complete

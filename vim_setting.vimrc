@@ -11,6 +11,7 @@ syntax on
 
 "不需要备份
 set nobackup
+set noswapfile
 
 "没有保存或文件只读时弹出确认
 set confirm
