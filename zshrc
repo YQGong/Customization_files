@@ -63,14 +63,15 @@ plugins=(
   zsh-autosuggestions
 )
 
+# track the dir manually by z
+_Z_NO_RESOLVE_SYMLINKS=1
+_Z_NO_PROMPT_COMMAND=1
+
 source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 
-# track the dir manually by z
-_Z_NO_RESOLVE_SYMLINKS=1
-_Z_NO_PROMPT_COMMAND=1
 
 # User configuration
 
