@@ -6,4 +6,6 @@ rm ~/.oh-my-zsh/lib/key-bindings.zsh
 ln -s $PWD/key-bindings.zsh ~/.oh-my-zsh/lib/key-bindings.zsh
 rm ~/.oh-my-zsh/themes/bureau.zsh-theme
 ln -s $PWD/bureau.zsh-theme ~/.oh-my-zsh/themes/bureau.zsh-theme
+rm ~/.zsh_history
+mkdir ~/.zsh_history
 echo complete

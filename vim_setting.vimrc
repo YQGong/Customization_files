@@ -14,7 +14,7 @@ set nobackup
 set confirm
 
 "鼠标可用
-set mouse=a
+"set mouse=a
 
 "tab缩进
 set tabstop=4
