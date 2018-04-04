@@ -1,3 +1,5 @@
+"backspace
+set backspace=indent,eol,start
 "显示行号
 set nu
 
@@ -63,7 +65,7 @@ set nocompatible
 set wildmenu
 " 高亮显示当前行/列
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 " 设置 gvim 显示字体
 "set guifont=YaHei\ Consolas\ Hybrid\ 11.5
 "
