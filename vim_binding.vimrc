@@ -92,4 +92,3 @@ nmap <C-b> Hzz
 
 "esc
 inoremap jj <ESC>l
-inoremap <ESC> <ESC>l
