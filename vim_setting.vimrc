@@ -4,6 +4,16 @@ let Tlist_Exit_OnlyWindow=1  " 当taglist是最后以个窗口时自动退出
 let Tlist_Use_Right_Window=1 " 在右边显示taglist窗口
 let Tlist_Sort_Type="name"   " tag按名字排序
 
+set foldenable              " 开始折叠
+set foldmethod=syntax       " 设置语法折叠
+set foldcolumn=0            " 设置折叠区域的宽度
+setlocal foldlevel=1        " 设置折叠层数为
+set foldlevelstart=99       " 打开文件是默认不折叠代码
+
+"set foldclose=all          " 设置为自动关闭折叠
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+                            " 用空格键来开关折叠
+
 filetype plugin indent on
 set completeopt=longest,menu
 let OmniCpp_NamespaceSearch = 2     " search namespaces in the current buffer   and in included files
