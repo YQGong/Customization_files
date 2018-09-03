@@ -19,7 +19,7 @@ alias l='ls -CF'
 
 myls() {
 #ls并打印README
-ls $@ --color=auto
+ls $@ -G
 if [ -s .DIRREADME.txt ]
 then
     echo "";
