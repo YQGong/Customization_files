@@ -11,7 +11,7 @@ setlocal foldlevel=1        " 设置折叠层数为
 set foldlevelstart=99       " 打开文件是默认不折叠代码
 
 "set foldclose=all          " 设置为自动关闭折叠
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+"nnoremap <leader>o @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
                             " 用空格键来开关折叠
 
 filetype plugin indent on
