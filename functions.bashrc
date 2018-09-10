@@ -21,12 +21,13 @@ alias l='ls -CF'
 
 myls() {
 #ls并打印README
-ls $@ --color=auto
 if [ -s .DIRREADME.txt ]
 then
     echo "";
     cat .DIRREADME.txt;
+    echo "";
 fi
+ls $@ --color=auto
 }
 
 alias ls='myls'
