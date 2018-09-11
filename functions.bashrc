@@ -21,6 +21,7 @@ alias l='ls -CF'
 
 myls() {
 #ls并打印README
+#if [  ]
 if [ -s .DIRREADME.txt ]
 then
     echo "";
@@ -87,6 +88,7 @@ myopen(){
     else
         echo file not exist!
         echo a new file created.
+        mkdir -p $(dirname $1)
         touch $1
         open $1
     fi
