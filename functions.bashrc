@@ -90,7 +90,7 @@ function histall { convhistory =(allhistory) |
 
     myopen(){
         if [ -f $1 ];then
-            open $1
+            xdg-open $1
         else
             echo file not exist!
                 echo a new file created.
