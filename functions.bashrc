@@ -20,6 +20,11 @@ alias l='ls -CF'
 myls() {
 #ls并打印README
 ls $@ --color=auto
+if [ -s README.txt ]
+then
+    echo "";
+    cat README.txt;
+fi
 if [ -s .DIRREADME.txt ]
 then
     echo "";
