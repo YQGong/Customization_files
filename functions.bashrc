@@ -26,15 +26,15 @@ myls() {
         lspath="$(eval echo "\$$#")"
     else
         lspath=""
-    fi
+            fi
 #    echo $lspath
 #    echo "./$lspath/.DIRREADME.txt"
-    if [ -s "./$lspath/.DIRREADME.txt" ];then
-        echo "";
-        cat "./$lspath/.DIRREADME.txt";
-        echo "";
+            if [ -s "./$lspath/.DIRREADME.txt" ];then
+                echo "";
+    cat "./$lspath/.DIRREADME.txt";
+    echo "";
     fi
-    ls $@ --color=auto
+        ls $@ --color=auto
 }
 
 alias ls='myls'
@@ -96,7 +96,7 @@ function histall { convhistory =(allhistory) |
                 echo a new file created.
                 mkdir -p $(dirname $1)
                 touch $1
-                open $1
+                xdg-open $1
                 fi
     }
 alias open='myopen'

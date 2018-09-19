@@ -1,3 +1,5 @@
+source ~/Customization_files/functions.bashrc
+ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -123,3 +125,9 @@ setopt AUTO_MENU
 #setopt MENU_COMPLETE
 
 stty -ixon
+
+export PATH=$PATH:/Applications/Mathematica.app/Contents/MacOS:/Users/yinqianggong/rec/spark/bin:/Users/yinqianggong/rec/spark/sbin:/Users/yinqianggong/rec/hadoop/bin:/Users/yinqianggong/rec/hadoop/sbin:
+export SPARK_HOME=/Users/yinqianggong/rec/spark
+export HADOOP_HOME=/Users/yinqianggong/rec/hadoop
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+export PATH=$PATH:.
