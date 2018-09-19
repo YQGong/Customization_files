@@ -1,5 +1,7 @@
 alias ls='ls'
 unalias ls
+alias open='open'
+unalias open
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -13,18 +15,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
 myls() {
 #ls并打印README
 ls $@ --color=auto
-if [ -s README.txt ]
-then
-    echo "";
-    cat README.txt;
-fi
 if [ -s .DIRREADME.txt ]
 then
     echo "";
@@ -81,3 +78,16 @@ function top50 { allhistory | awk -F':[ 0-9]*:[0-9]*;' '{ $1="" ; print }' | sed
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+myopen(){
+    if [ -f $1 ];then
+        open $1
+    else
+        echo file not exist!
+        echo a new file created.
+        touch $1
+        open $1
+    fi
+}
+alias open='myopen'

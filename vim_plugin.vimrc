@@ -6,6 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
+"Cpp start
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/OmniCppComplete'
+Plugin 'ervandew/supertab.git'
+
 " markdown start
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'

@@ -90,4 +90,4 @@ nmap <C-b> Hzz
 "imap y <C-o>yy
 
 "esc
-imap jj <ESC>l
+inoremap jj <ESC>l
